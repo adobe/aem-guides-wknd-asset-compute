@@ -1,6 +1,6 @@
-# AEM Guides - WKND Asset Compute application
+# AEM Guides - WKND Asset Compute project
 
-Welcome to the WKND Asset Compute application!
+Welcome to the WKND Asset Compute project!
 
 This project contains the example code use to define a custom Asset Compute worker as illustrated in the [Asset Compute extensibility tutorial](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/asset-compute/overview.html).
 
