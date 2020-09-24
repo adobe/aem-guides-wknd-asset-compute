@@ -1,10 +1,12 @@
-# wkndAemAssetCompute
+# AEM Guides - WKND Asset Compute application
 
-Welcome to my Adobe I/O Application!
+Welcome to the WKND Asset Compute application!
+
+This project contains the example code use to define a custom Asset Compute worker as illustrated in the [Asset Compute extensibility tutorial](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/asset-compute/overview.html).
 
 ## Setup
 
-- Populate the `.env` file in the project root and fill it as shown [below](#env)
+- Populate the `.env` file in the project root and fill it as shown [below](#env). Node that the `console.json` file must also contain accurate information for Local Dev.
 
 ## Local Dev
 
@@ -14,7 +16,6 @@ Welcome to my Adobe I/O Application!
 ## Test & Coverage
 
 - Run `aio app test` to run unit tests for ui and actions
-- Run `aio app test -e` to run e2e tests
 
 ## Deploy & Cleanup
 
@@ -35,41 +36,15 @@ Welcome to my Adobe I/O Application!
 
 ### `manifest.yml`
 
-- List your backend actions under the `actions` field within the `__APP_PACKAGE__`
+- List your backend Asset Compute Workers under the `actions` field within the `__APP_PACKAGE__`
 package placeholder. We will take care of replacing the package name placeholder
 by your project name and version.
-- For each action, use the `function` field to indicate the path to the action
-code.
-- More documentation for supported action fields can be found
-[here](https://github.com/apache/incubator-openwhisk-wskdeploy/blob/master/specification/html/spec_actions.md#actions).
+- For each action, use the `function` field to indicate the path to the Asset Compute worker code entry point.
 
-#### Action Dependencies
+## Contributing
+Looking to contribute to this project? Please review our [Contributing guidelines](CONTRIBUTING.md) prior to opening a pull request.
 
-- You have two options to resolve your actions' dependencies:
+We look forward to working with you!
 
-  1. **Packaged action file**: Add your action's dependencies to the root
-   `package.json` and install them using `npm install`. Then set the `function`
-   field in `manifest.yml` to point to the **entry file** of your action
-   folder. We will use `parcelJS` to package your code and dependencies into a
-   single minified js file. The action will then be deployed as a single file.
-   Use this method if you want to reduce the size of your actions.
-
-  2. **Zipped action folder**: In the folder containing the action code add a
-     `package.json` with the action's dependencies. Then set the `function`
-     field in `manifest.yml` to point to the **folder** of that action. We will
-     install the required dependencies within that directory and zip the folder
-     before deploying it as a zipped action. Use this method if you want to keep
-     your action's dependencies separated.
-
-
-## Typescript support for UI
-
-To use typescript use `.tsx` extension for react components and add a `tsconfig.json` 
-and make sure you have the below config added
-```
- {
-  "compilerOptions": {
-      "jsx": "react"
-    }
-  } 
-```
+## Licensing
+This project is licensed under the Apache V2 License. See [LICENSE](LICENSE) for more information.
