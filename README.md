@@ -6,7 +6,7 @@ This project contains the example code use to define a custom Asset Compute work
 
 ## Setup
 
-- Populate the `.env` file in the project root and fill it as shown [below](#env). Node that the `console.json` file must also contain accurate information for Local Dev.
+- Populate the `.env` file in the project root and fill it as shown [below](#env). Note that the `console.json` file must also contain accurate information for Local Dev.
 
 ## Local Dev
 
